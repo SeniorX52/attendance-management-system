@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ams.DataEntryController">
+   <children>
+      <ImageView fx:id="background" fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/mainPage.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="username" layoutX="195.0" layoutY="49.0" prefHeight="17.0" prefWidth="219.0" text="Mostafa">
+         <font>
+            <Font name="Poppins Medium" size="28.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="1.0" blue="0.13333334028720856" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="dateTimeLabel" alignment="CENTER" layoutX="1419.0" layoutY="895.0" prefHeight="116.0" prefWidth="498.0" text="yyyy-MM-dd HH:mm:ss">
+         <font>
+            <Font name="Poppins Medium" size="34.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameTextField" layoutX="755.0" layoutY="427.0" prefHeight="42.0" prefWidth="244.0" promptText="ex.Mostafa">
+         <font>
+            <Font name="Poppins Medium" size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="498.0" layoutY="429.0" prefHeight="17.0" prefWidth="145.0" text="Name">
+         <font>
+            <Font name="Poppins Regular" size="23.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="499.0" layoutY="493.0" prefHeight="17.0" prefWidth="145.0" text="Age">
+         <font>
+            <Font name="Poppins Regular" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="500.0" layoutY="558.0" prefHeight="36.0" prefWidth="232.0" text="Telephone Number">
+         <font>
+            <Font name="Poppins Regular" size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ageTextField" layoutX="755.0" layoutY="494.0" prefHeight="42.0" prefWidth="244.0" promptText="ex.20">
+         <font>
+            <Font name="Poppins Medium" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="numberTextField" layoutX="755.0" layoutY="560.0" prefHeight="42.0" prefWidth="244.0" promptText="ex.+201234567899">
+         <font>
+            <Font name="Poppins Medium" size="20.0" />
+         </font>
+      </TextField>
+      <Label contentDisplay="CENTER" layoutX="507.0" layoutY="627.0" prefHeight="17.0" prefWidth="145.0" text="Email">
+         <font>
+            <Font name="Poppins Regular" size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailTextField" layoutX="754.0" layoutY="624.0" prefHeight="42.0" prefWidth="244.0" promptText="email">
+         <font>
+            <Font name="Poppins Medium" size="20.0" />
+         </font>
+      </TextField>
+      <Label contentDisplay="CENTER" layoutX="505.0" layoutY="694.0" prefHeight="17.0" prefWidth="145.0" text="Gender">
+         <font>
+            <Font name="Poppins Regular" size="23.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="maleRadioButton" layoutX="735.0" layoutY="694.0" mnemonicParsing="false" text="Male">
+         <font>
+            <Font name="Poppins SemiBold" size="22.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="femaleRadioButton" layoutX="896.0" layoutY="695.0" mnemonicParsing="false" text="Female">
+         <font>
+            <Font name="Poppins SemiBold" size="22.0" />
+         </font>
+      </RadioButton>
+      <ImageView fx:id="user" fitHeight="211.0" fitWidth="231.0" layoutX="564.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" />
+      <StackPane fx:id="buttonStackpane" layoutX="1050.0" layoutY="736.0" prefHeight="107.0" prefWidth="335.0">
+         <children>
+            <ImageView fx:id="createImageView" fitHeight="89.0" fitWidth="359.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/blue%20button.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" mouseTransparent="true" prefHeight="52.0" prefWidth="330.0" text="Submit" textFill="WHITE">
+               <font>
+                  <Font name="Futura Md BT Bold" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="createButton" mnemonicParsing="false" onMouseClicked="#submit" opacity="0.0" prefHeight="88.0" prefWidth="335.0" text="Submit" />
+         </children>
+      </StackPane>
+      <ListView fx:id="listView" layoutX="1045.0" layoutY="268.0" prefHeight="403.0" prefWidth="342.0" />
+      <Label alignment="CENTER" layoutX="1051.0" layoutY="179.0" prefHeight="17.0" prefWidth="330.0" text="Available Courses">
+         <font>
+            <Font name="Poppins Bold" size="21.0" />
+         </font>
+      </Label>
+      <ListView fx:id="assignedCoursesListView" layoutX="498.0" layoutY="782.0" prefHeight="201.0" prefWidth="468.0" />
+      <Label alignment="CENTER" layoutX="567.0" layoutY="742.0" prefHeight="17.0" prefWidth="330.0" text="Assigned Courses">
+         <font>
+            <Font name="Poppins Bold" size="21.0" />
+         </font>
+      </Label>
+      <StackPane fx:id="buttonStackpane11" layoutX="1471.0" layoutY="445.0" prefHeight="43.0" prefWidth="123.0">
+         <children>
+            <ImageView fx:id="assignImageView" fitHeight="43.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/green%20button.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" mouseTransparent="true" prefHeight="52.0" prefWidth="162.0" text="Assign" textFill="WHITE">
+               <font>
+                  <Font name="Futura Md BT Bold" size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="assignButton" mnemonicParsing="false" onMouseClicked="#assign" opacity="0.0" prefHeight="32.0" prefWidth="157.0" text="Submit" />
+         </children>
+      </StackPane>
+      <TextField fx:id="searchCourses" layoutX="1061.0" layoutY="219.0" prefHeight="32.0" prefWidth="302.0" promptText="Search">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <StackPane fx:id="buttonStackpane12" layoutX="1054.0" layoutY="844.0" prefHeight="109.0" prefWidth="335.0">
+         <children>
+            <ImageView fx:id="clearCoursesImageView" fitHeight="89.0" fitWidth="359.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/red%20button.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" mouseTransparent="true" prefHeight="52.0" prefWidth="330.0" text="Clear Assigned Courses" textFill="WHITE">
+               <font>
+                  <Font name="Futura Md BT Bold" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="clearCoursesButton" mnemonicParsing="false" onMouseClicked="#clearAssignedCourses" opacity="0.0" prefHeight="88.0" prefWidth="335.0" text="Submit" />
+         </children>
+      </StackPane>
+      <Label fx:id="alertMessage" alignment="CENTER" layoutX="1429.0" layoutY="211.0" prefHeight="151.0" prefWidth="456.0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Poppins Bold" size="22.0" />
+         </font>
+      </Label>
+      <StackPane fx:id="buttonStackpane111" layoutX="739.0" layoutY="110.0" prefHeight="27.0" prefWidth="122.0">
+         <children>
+            <ImageView fx:id="createStudentImageView" fitHeight="43.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/green%20button.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" mouseTransparent="true" prefHeight="52.0" prefWidth="162.0" text="Create" textFill="WHITE">
+               <font>
+                  <Font name="Futura Md BT Bold" size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="createStudentButton" mnemonicParsing="false" onMouseClicked="#assign" opacity="0.0" prefHeight="32.0" prefWidth="157.0" text="Create" />
+         </children>
+      </StackPane>
+      <StackPane fx:id="buttonStackpane112" layoutX="1083.0" layoutY="111.0" prefHeight="43.0" prefWidth="123.0">
+         <children>
+            <ImageView fx:id="editImageView" fitHeight="43.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/red%20button.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" mouseTransparent="true" prefHeight="52.0" prefWidth="162.0" text="Edit" textFill="WHITE">
+               <font>
+                  <Font name="Futura Md BT Bold" size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="editButton" mnemonicParsing="false" onMouseClicked="#edit" opacity="0.0" prefHeight="32.0" prefWidth="157.0" text="Edit" />
+         </children>
+      </StackPane>
+      <ImageView fx:id="refreshImageView" fitHeight="55.0" fitWidth="62.0" layoutX="1837.0" layoutY="50.0" onMouseClicked="#refresh" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/Refresh_icon.png" />
+         </image>
+      </ImageView>
+      <StackPane fx:id="buttonStackpane1131" layoutX="502.0" layoutY="737.0" prefHeight="43.0" prefWidth="123.0">
+         <children>
+            <ImageView fx:id="removeCourseImageView" fitHeight="32.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/red%20button.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" mouseTransparent="true" prefHeight="52.0" prefWidth="162.0" text="Remove" textFill="WHITE">
+               <font>
+                  <Font name="Futura Md BT Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="removeCourseButton" mnemonicParsing="false" onMouseClicked="#removeSelectedCourses" opacity="0.0" prefHeight="32.0" prefWidth="157.0" text="Submit" />
+         </children>
+      </StackPane>
+      <Label alignment="CENTER" layoutX="400.0" layoutY="50.0" onMouseClicked="#switchToMain" prefHeight="40.0" prefWidth="78.0" text="Main" textFill="WHITE">
+         <font>
+            <Font name="Poppins Medium" size="28.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="550.0" layoutY="50.0" onMouseClicked="#switchToAttendance" prefHeight="40.0" prefWidth="174.0" text="Attendance" textFill="WHITE">
+         <font>
+            <Font name="Poppins Medium" size="28.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="789.0" layoutY="50.0" onMouseClicked="#switchToCourses" prefHeight="40.0" prefWidth="131.0" text="Courses" textFill="WHITE">
+         <font>
+            <Font name="Poppins Medium" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="underline" fitHeight="6.0" fitWidth="94.0" layoutX="1045.0" layoutY="84.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../images/underline.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="996.0" layoutY="50.0" prefHeight="40.0" prefWidth="191.0" text="Data Entry" textFill="WHITE">
+         <font>
+            <Font name="Poppins Medium" size="28.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="studentRadioButton" layoutX="851.0" layoutY="259.0" mnemonicParsing="false" onMouseClicked="#setStudentImage" prefHeight="32.0" prefWidth="131.0" text="Student">
+         <font>
+            <Font name="Poppins SemiBold" size="22.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="instructorRadioButton" layoutX="851.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#setInstructorImage" text="Instructor">
+         <font>
+            <Font name="Poppins SemiBold" size="22.0" />
+         </font>
+      </RadioButton>
+      <ImageView fx:id="logout" fitHeight="52.0" fitWidth="67.0" layoutX="1722.0" layoutY="43.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/logout.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
