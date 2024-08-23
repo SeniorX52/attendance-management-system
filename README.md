@@ -32,6 +32,6 @@ AMS v1.0 is a robust attendance management application designed to handle large-
 If you encounter any issues or have questions, please contact me at mostafa.abdelazizx52@gmail.com.
 
 We appreciate your support and hope you find the application valuable for your attendance management needs.
-
+Video Link:https://www.linkedin.com/posts/mostafa-abdelaziz-429420271_attendancemanagement-educationtech-softwaredevelopment-activity-7225580156898185216-TPTM?utm_source=share&utm_medium=member_desktop
 Contributors: 
 Mostafa Abdelaziz
